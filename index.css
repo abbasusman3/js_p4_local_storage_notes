@@ -1,0 +1,122 @@
+body{
+    background-image: url('1.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    color: yellow; 
+    font-size: 80px;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#section-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+#userInput{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+}
+
+#add-btn{
+    width: 5%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#section-two{
+    display: flex;
+    justify-content: center; /* Center the first note */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 10px; /* Gap between notes */
+    width: 100%;
+    height: auto;
+    color: white;
+    margin: 10px 0px 0px 0px;
+}
+
+.box {
+    background-color: rgb(178, 190, 8);
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px rgb(110, 110, 27);
+}
+
+#cross-icon{
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #userInput {
+        width: 80%;
+        margin-top: 35%;
+    }
+
+    #add-btn {
+        width: 20%;
+        margin-top: 35%;
+    }
+
+    #section-two {
+        flex-direction: column; /* Stack notes vertically on smaller screens */
+        gap: 20px; /* Increase gap for better spacing on smaller screens */
+    }
+
+    .box {
+        width: 90%; /* Make boxes take up most of the screen width */
+        text-shadow: 2px 2px 4px #000000;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 769px) {
+    #userInput {
+        width: 50%;
+    }
+
+    #add-btn {
+        width: 5%;
+    }
+
+    #section-two {
+        flex-direction: row; /* Display notes in a row on larger screens */
+        gap: 10px; /* Standard gap between notes */
+    }
+
+    .box {
+        width: 30%; /* Set the width of the boxes to 60% */
+        box-shadow: 4px 4px 30px rgb(110, 110, 27); /* Add more box shadow */
+    }
+
+    h1{
+        font-size: 100px;
+    }
+}
